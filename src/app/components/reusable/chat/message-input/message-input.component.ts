@@ -26,6 +26,7 @@ export class MessageInputComponent implements OnChanges {
 
   @ViewChild('msgInput') input!: ElementRef<HTMLTextAreaElement>;
 
+
   @Input() currentChatRecordId!: string;
   @Input() parentChat!: ChatTypes;
   @Input() channel!: Channel;
@@ -61,6 +62,7 @@ export class MessageInputComponent implements OnChanges {
       this.placeholderText = 'Notiz für mich...';
     }
   }
+
 
   /**
    * Sends the message to the corresponding chatRecord and checks if

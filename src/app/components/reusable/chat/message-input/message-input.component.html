@@ -18,6 +18,8 @@
     id="msgInput"
     type="text"
     placeholder="{{ placeholderText }}"
+    (keyup.enter)="sendMessage()"
+
   ></textarea>
 
   <!-- File Preview -->
@@ -119,6 +121,7 @@
     <div>
       <button
         (click)="sendMessage()"
+        #sendButton
         mat-icon-button
         class="btn__icon-wo-bg"
         aria-label="Icon button to send the message"
