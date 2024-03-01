@@ -14,7 +14,7 @@
         <div class="dialog__content--header">
             <h1> {{ currentUser.name }} </h1>
 
-            <span (click)="openDialogProfilEdit()" class="material-icons-outlined edit-icon"> edit </span>
+            <span *ngIf="!this.authService.guestIsLoggedIn" (click)="openDialogProfilEdit()" class="material-icons-outlined edit-icon"> edit </span>
         </div>
 
         <div class="dialog__content--status">
